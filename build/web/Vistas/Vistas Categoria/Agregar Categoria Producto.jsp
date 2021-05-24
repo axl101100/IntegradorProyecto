@@ -4,26 +4,35 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Agregar Categoria Producto</title>
-        <link href="css/bootstrap.min.css" rel="stylesheet"> 
-        <link href="css/estilos.css" rel="stylesheet">
+        <link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="../../css/estilos.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <h1>Agregar Categoria Producto</h1>
-        <form action="Control" method="post">
-            Nombre:
-            <select name="nombre">
-                <c:forEach var="lis" items="${lista}">
-                    <option value="${lis.getId()}">${lis.getNombre()}</option>
-                </c:forEach>
-            </select><br>  
-            Codigo:
-            <input type="text" name="codigo"><br>
 
-            <input type="submit" name="accion" value="Agregar categoria">
-        </form>
+        <div class="container pt-5  pb-5 ">
+            <h1>Agregar Categoria Producto</h1>
+            <form action="Control" method="post">
 
-        <script src="js/jquery-3.6.0.min.js" type="text/javascript"></script>
-        <script src="js/popper.min.js"  type="text/javascript"></script>
-        <script src="js/bootstrap.min.js"  type="text/javascript"></script>
+                <div class="form-group">
+                    <label>Nombre:</label>
+                    <select class="form-control" name="nombre">
+                        <c:forEach var="lis" items="${lista}">
+                            <option value="${lis.getId()}">${lis.getNombre()}</option>
+                        </c:forEach>
+                    </select>  
+                </div>
+
+                <div class="form-group">
+                    <label>Codigo:</label>
+                    <input class="form-control" type="text" name="codigo">
+                </div>
+
+                <input class="btn btn-primary" type="submit" name="accion" value="Agregar categoria">
+            </form>
+                        
+        </div>
+                        
+        <script src="../../js/jquery-3.6.0.min.js" type="text/javascript"></script>
+        <script src="../../js/bootstrap.js" type="text/javascript"></script>
     </body>
 </html>

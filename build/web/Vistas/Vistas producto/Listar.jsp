@@ -9,14 +9,15 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
-        <link href="css/bootstrap.min.css" rel="stylesheet"> 
-        <link href="css/estilos.css" rel="stylesheet">
+        <link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="../../css/estilos.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
 
-        <div class="container">
+        <div class="container pt-5  pb-5 ">
 
-            <h1>Listar productos</h1>  
+            <h1>Listar productos</h1> 
+            
             <table class="table table-striped">
                 <tr>
                     <th>Subcategoria</th>
@@ -40,9 +41,8 @@
 
         </div>
 
-        <script src="js/jquery-3.6.0.min.js" type="text/javascript"></script>
-        <script src="js/popper.min.js"  type="text/javascript"></script>
-        <script src="js/bootstrap.min.js"  type="text/javascript"></script>
-
+        <script src="../../js/jquery-3.6.0.min.js" type="text/javascript"></script>
+        <script src="../../js/bootstrap.js" type="text/javascript"></script>
+        
     </body>
 </html>

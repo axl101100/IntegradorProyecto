@@ -8,43 +8,82 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
-                <link href="css/bootstrap.min.css" rel="stylesheet"> 
-        <link href="css/estilos.css" rel="stylesheet">
+        <link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="../../css/estilos.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <h1>REGISTRO CLIENTE</h1>
-        <form action="Control" method="post">
-            <label>Dni</label>
-            <input type="text" name="dni"><br>
-            <label>Nombre</label>
-            <input type="text" name="nombre"><br>
-            <label>Apellido Paterno</label>
-            <input type="text" name="ape_paterno"><br>
-            <label>Apellido Materno</label>
-            <input type="text" name="ape_materno"><br>
-            <label>Sexo</label>
-            <input type="text" name="sexo"><br>
-            <label>Telefono</label>
-            <input type="text" name="telefono"><br>
-            <label>Correo</label>
-            <input type="text" name="correo"><br>   
-            <label>Contraseña</label>
-            <input type="text" name="contrasena"><br>
-            <label>Distrito</label>
-            <select name="distrito">
-                <c:forEach var="lis" items="${lista}">
-                    <option value="${lis.getDni()}">${lis.getNombre()}</option>
-                </c:forEach>
-            </select><br> 
-            <label>Direccion</label>
-            <input type="text" name="direccion"><br>
-            <label>Referencia</label>
-            <input type="text" name="referencia"><br>
-            <input type="submit" name="accion" value="Agregar Cliente">  
-        </form>
-        
-        <script src="js/jquery-3.6.0.min.js" type="text/javascript"></script>
-        <script src="js/popper.min.js"  type="text/javascript"></script>
-        <script src="js/bootstrap.min.js"  type="text/javascript"></script>
+        <div class="container pt-5  pb-5 ">
+            <h1>REGISTRO CLIENTE</h1>
+            <form action="Control" method="post">
+
+                <div class="form-group">
+                    <label>Dni</label>
+                    <input class="form-control" type="text" name="dni">
+                </div>
+
+                <div class="form-group">
+                    <label>Nombre</label>
+                    <input class="form-control" type="text" name="nombre">
+                </div>
+
+                <div class="form-group">
+                    <label>Apellido Paterno</label>
+                    <input class="form-control" type="text" name="ape_paterno">
+                </div>
+
+                <div class="form-group">
+                    <label>Apellido Materno</label>
+                    <input class="form-control" type="text" name="ape_materno">
+                </div>
+
+                <div class="form-group">
+                    <label>Sexo</label>
+                    <input class="form-control" type="text" name="sexo">
+                </div>
+
+                <div class="form-group">
+                    <label>Telefono</label>
+                    <input class="form-control" type="text" name="telefono">
+                </div>
+
+
+                <div class="form-group">
+                    <label>Correo</label>
+                    <input class="form-control" type="text" name="correo"> 
+                </div>
+
+
+                <div class="form-group">
+                    <label>Contraseña</label>
+                    <input class="form-control" type="text" name="contrasena">
+                </div>
+
+
+                <div class="form-group">
+                    <label>Distrito</label>
+                    <select class="form-control" name="distrito">
+                        <c:forEach var="lis" items="${lista}">
+                            <option value="${lis.getDni()}">${lis.getNombre()}</option>
+                        </c:forEach>
+                    </select> 
+                </div>
+
+
+                <div class="form-group">
+                    <label>Direccion</label>
+                    <input class="form-control" type="text" name="direccion">
+                </div>
+
+
+                <div class="form-group">
+                    <label>Referencia</label>
+                    <input class="form-control" type="text" name="referencia">
+                </div>
+
+                <input class="btn btn-primary" type="submit" name="accion" value="Agregar Cliente">  
+            </form>
+        </div>
+        <script src="../../js/jquery-3.6.0.min.js" type="text/javascript"></script>
+        <script src="../../js/bootstrap.js" type="text/javascript"></script>
     </body>
 </html>
