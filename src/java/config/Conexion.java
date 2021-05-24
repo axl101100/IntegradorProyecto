@@ -13,7 +13,7 @@ public class Conexion {
     public Conexion(){
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost/bd_farmacia","root","mysql");
+            con = DriverManager.getConnection("jdbc:mysql://localhost/bd_farmacia","root","");
             System.out.println("Conexion exitosa");
         } catch (ClassNotFoundException | SQLException ex){
             Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
